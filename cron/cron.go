@@ -23,7 +23,7 @@ func CreateCronJob(d time.Duration, f func() string) {
 			logs.Alert(fmt.Sprintf("fname:%v,start_time:%s\n", fName, t.Format("2006-01-02 15:04:05")))
 			ret := f()
 			fmt.Println(ret)
-			logs.Alert(fmt.Sprintf("fanme:%v,end_time:%s,ret:%s\n", fName, t.Format("2006-01-02 15:04:05")), ret)
+			logs.Alert(fmt.Sprintf("fanme:%v,end_time:%s,ret:%s\n", fName, t.Format("2006-01-02 15:04:05"), ret))
 
 			runLock = false
 		}
