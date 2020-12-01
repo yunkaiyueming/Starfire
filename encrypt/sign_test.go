@@ -3,7 +3,7 @@ package encrypt
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github/stretchr/testify/assert"
 )
 
 func TestGetSign(t *testing.T) {
@@ -17,9 +17,9 @@ func TestGetSign(t *testing.T) {
 	}
 
 	inputs := []Input{
-		{map[string]string{"app_name": "bi", "user": "zhangsan@rayjoy.com", "url": "http://www.google.com"}, "723773045578c74442ace5af8f3b0e8359a4c094"},
-		{map[string]string{"app_name": "hammer", "user": "lisi@rayjoy.com", "url": "http://www.baidu.com"}, "d87c93907550081d61cb673d6d7eba77312d8bf3"},
-		{map[string]string{"app_name": "rsdk-set", "user": "longlong@rayjoy.com", "url": "http://www.hao123.com"}, "bc4d7d2e64c6fb343dd31a8a4ece36b9a9141a28"},
+		{map[string]string{"app_name": "bi", "user": "zhangsa", "url": "http://www.google"}, "723773045578c74442ace5af8f3b0e8359a4c094"},
+		{map[string]string{"app_name": "hammer", "user": "lis", "url": "http://www.baidu"}, "d87c93907550081d61cb673d6d7eba77312d8bf3"},
+		{map[string]string{"app_name": "rsdk-set", "user": "longlon", "url": "http://www.hao123"}, "bc4d7d2e64c6fb343dd31a8a4ece36b9a9141a28"},
 	}
 
 	shoulds := []Out{
@@ -46,9 +46,9 @@ func TestCheckSign(t *testing.T) {
 	}
 
 	inputs := []Input{
-		{map[string]string{"app_name": "bi", "user": "zhangsan@rayjoy.com", "url": "http://www.google.com"}, "723773045578c74442ace5af8f3b0e8359a4c094", "f3c99ce3f7a1be009c985ce12702fdb1"},
-		{map[string]string{"app_name": "hammer", "user": "lisi@rayjoy.com", "url": "http://www.baidu.com"}, "d87c93907550081d61cb673d6d7eba77312d8bf3", "c06a9b47a94755fc4cf2eaae95c29f64"},
-		{map[string]string{"app_name": "rsdk-set", "user": "longlong@rayjoy.com", "url": "http://www.hao123.com"}, "d87c93907550081d61cb673d6d7eba77312d8bf3", "ttt"},
+		{map[string]string{"app_name": "bi", "user": "zhangsa", "url": "http://www.google"}, "723773045578c74442ace5af8f3b0e8359a4c094", "f3c99ce3f7a1be009c985ce12702fdb1"},
+		{map[string]string{"app_name": "hammer", "user": "lis", "url": "http://www.baidu"}, "d87c93907550081d61cb673d6d7eba77312d8bf3", "c06a9b47a94755fc4cf2eaae95c29f64"},
+		{map[string]string{"app_name": "rsdk-set", "user": "longlon", "url": "http://www.hao123"}, "d87c93907550081d61cb673d6d7eba77312d8bf3", "ttt"},
 	}
 
 	shoulds := []Out{
